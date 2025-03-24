@@ -18,19 +18,49 @@ def q03():
     print((5+8+12)/3)
 
 #4. Faça um programa que leia e imprima um número inteiro.
-
+def q04():
+    numero = int(input("Digite um número inteiro: "))
+    print (numero)
 
 
 #5. Faça um programa que leia dois números reais e os imprima.
+def q05():
+    num1 = float(input("Digite o primeiro número real: "))
+    num2 = float(input("Digite o segundo número real: "))
+    print(num1)
+    print(num2)
+
 
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
+def q06():
+    num = int(input("Digite um número inteiro: "))
+    print(f"Antecessor: {num-1}")
+    print (f"Sucessor: {num+1}")
+
 
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
+def q07():
+    nome = input("Nome: ")
+    endereco = input("Endereço: ")
+    telefone = input("Telefone: ")
+    texto = f'''
+    Nome: {nome}
+    Endereço: {endereco}
+    Telefone: {telefone}
+    '''
+    print(texto)
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
+def q08():
+    num1 = int(input("Número 1: "))
+    num2 = int(input("Número 2: "))
+    print(f"{num1} - {num2} = {num1-num2}")
+
+q08()
+
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
 
