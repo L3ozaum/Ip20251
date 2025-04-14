@@ -1,6 +1,9 @@
 '''
 Exercícios sobre os comandos de condição em python
 '''
+from datetime import date, datetime
+
+HOJE = datetime.now() 
 
 def exemploSe():
     media = float(input('Média: '))
@@ -37,6 +40,11 @@ def q1():
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
 
+def q2():
+    valor1 = int(input("Digite o primeiro valor: "))
+    valor2 = int(input("Digite o segundo valor: "))
+
+
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
 
@@ -59,10 +67,50 @@ def q1():
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
 
+def q9():
+    data_str = input("Data de Nascimento (dd/mm/aaaa): ")
+    data_nascimento = datetime.strptime(data_str, "%d/%m/%Y")
+
+    if (data_nascimento > HOJE):
+        print ("Data inválida! Você nem nasceu ainda kkk.")
+    else:
+       print (f"Idade: {int((HOJE - data_nascimento). days/365)} anos.")
+
+
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
 
+def q10():
+    a = int(input("Digite o primeiro inteiro: "))
+    b = int(input("Digite o segundo inteiro: "))
+    c = int(input("Digite o terceiro inteiro: "))
+
+    if (a < b < c): #Equivale a if (a < b < c < )
+     print(f"{a} {b} {c}")
+    if (a < c < b):
+        print (f" {a} {c} {b}")
+    if (b < a < c):
+        print (f" {b} {a} {c}")
+    if (b < c < a):
+        print (f" {b} {c} {a}")
+    if (c < a < b):
+        print (f" {c} {a} {b}")
+    if (c < b < a):
+        print (f" {c} {b} {a}")               
+
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+
+def q11():
+    num1 = int(input("Digite o primeiro número: "))
+    num2 = int(input("Digite o segundo número: "))
+    num3 = int(input("Digite o terceiro número: "))
+
+    if (num1>num2) (num1>num3):
+        print("O primeiro número é o maior:")
+    if (num2>num1) (num2>num3):
+        print("O segundo número é o maior:")
+    if (num3>num1) (num3>num2):
+        print("O terceiro número é o maior:")
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
@@ -171,3 +219,6 @@ def q1():
 #0,3 1º grupo
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
+
+questao = int(input("Questão a executar: "))
+eval(f"q{questao}()")
