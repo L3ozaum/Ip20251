@@ -2,8 +2,10 @@
 Exercícios sobre os comandos de condição em python
 '''
 from datetime import date, datetime
+from deep_translator import GoogleTranslator
 
-HOJE = datetime.now() 
+HOJE = datetime.now()
+tradutor = GoogleTranslator (source= "en", target = "pt")
 
 def exemploSe():
     media = float(input('Média: '))
@@ -43,10 +45,24 @@ def q1():
 def q2():
     valor1 = int(input("Digite o primeiro valor: "))
     valor2 = int(input("Digite o segundo valor: "))
+    soma_dos_valores = (valor1 + valor2)
+    if (soma_dos_valores > 20):
+        print (soma_dos_valores + 8)
+    if (soma_dos_valores <= 20):
+        print (soma_dos_valores - 5)
 
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+def q3():
+    num1 = int(input("Digite o primeiro número: "))
+    resultado = (num1%3)
+
+    if (resultado == 0 ):
+        print ("É múltiplo de 3")
+    else:
+        print ("não é múltiplo de 3")
+
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 
@@ -105,12 +121,18 @@ def q11():
     num2 = int(input("Digite o segundo número: "))
     num3 = int(input("Digite o terceiro número: "))
 
-    if (num1>num2) (num1>num3):
-        print("O primeiro número é o maior:")
-    if (num2>num1) (num2>num3):
-        print("O segundo número é o maior:")
-    if (num3>num1) (num3>num2):
-        print("O terceiro número é o maior:")
+    if (num1>num2>num3):
+        print("O primeiro número é o maior")
+    if (num1>num3>num2):
+        print("O primeiro número é o maior")
+    if (num2>num1>num3):
+        print("O segundo número é o maior")
+    if (num2>num3>num1):
+        print("O segundo número é o maior")
+    if (num3>num1>num2):
+        print("O terceiro número é o maior")
+    if (num3>num2>num1):
+        print("O terceiro número é o maior")
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
@@ -161,6 +183,17 @@ def q11():
 #18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
 #aparecer uma mensagem informando que não existe mês com este número.
+
+def q18():
+    mes = int(input('Número do Mês: '))
+    if mes < 1 or mes > 12:
+        print('Mês Inválido!')
+    else:
+        data = datetime.strptime(f'01/{mes}/25', '%d/%m/%y')
+        mes_extenso = data.strftime('%B')
+        print(tradutor.translate ("Month:" + mes_extenso))
+
+
 
 #19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores
 #para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o
