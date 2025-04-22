@@ -55,23 +55,44 @@ def q2():
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
 def q3():
-    num1 = int(input("Digite o primeiro número: "))
+    num1 = int(input("Digite um número: "))
     resultado = (num1%3)
 
     if (resultado == 0 ):
         print ("É múltiplo de 3")
     else:
-        print ("não é múltiplo de 3")
+        print ("Não é múltiplo de 3")
 
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 
+def q4():
+    num = int(input("Digite um número: "))
+    resultado = (num%5)
+
+    if (resultado == 0 ):
+        print ("Esse número é divisível por 5 ")
+    else:
+        print ("Esse número não é divisível por 5 ")
+
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+
+def q5():
+    num = float(input("Digite um número: "))
+
+    if (num%3 == 0 and num%7 == 0 ):
+        print ("Esse número é divisível por 3 e 7 ")
+    else:
+        print ("Esse número não é divisível por 3 e 7 ")
 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
+
+def q6():
+    salario = float(input("Digite o seu salário: "))
+    valor_prestacao = salario * 0.30
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
@@ -138,6 +159,15 @@ def q11():
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
+
+def q12():
+    idade = int(input("Digite a sua idade: "))
+    if (idade >= 18):
+        print("Você é maior de idade")
+    if (idade < 18):
+        print("Você é menor de idade")
+    if (idade > 65):
+        print("Você é idoso")
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
