@@ -175,6 +175,13 @@ def q12():
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
 
+def q13():
+
+    nome = ("Digite o seu nome: ")
+    prova1 = int(input("Digite a nota da prova: "))
+    prova2 = int(input("Digite a nota da prova: "))
+    media_prova = prova1
+
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
 #Salário Faixa de Desconto
@@ -265,6 +272,52 @@ def q18():
 #Peixe          230cal Sorvete diet     110cal Suco de laranja   70cal
 #Frango         250cal Mousse diet      170cal Suco de melão     100cal
 #Carne          350cal Mousse chocolate 200cal Refrigerante diet 65cal
+
+def q23():
+    menu_prato_entrada = '''
+    [1] - Vegetariano (180 kcal)
+    [2] - Peixe (230 kcal)
+    [3] - Frango (250 kcal)
+    [4] - Carne (350 kcal)
+    Digite a opção de entrada [1-4]
+    '''
+
+    menu_bebida = '''
+    [1] - Chá (20 kcal)
+    [2] - Suco de Laranja (70 kcal)
+    [3] - Suco de Melão (100 kcal)
+    [4] - Refrigerante Diet (65 kcal)
+    Digite a opção de entrada [1-4]
+    '''
+
+    menu_sobremesa = '''
+    [1] - Abacaxi (75 kcal)
+    [2] - Sorvete Diet (110 kcal)
+    [3] - Mousse Diet (170 kcal)
+    [4] - Mousse de Chocolate (200 kcal)
+    Digite a opção de entrada [1-4]
+    '''
+
+    prato_entrada = int(input(menu_prato_entrada))
+    bebida = int(input(menu_bebida))
+    sobremesa = int(input(menu_sobremesa))
+
+    cal = 0
+
+    cal += 180 if prato_entrada == 1 else 0;
+    cal += 230 if prato_entrada == 2 else 0;
+    cal += 250 if prato_entrada == 3 else 0;
+    cal += 350 if prato_entrada == 4 else 0;
+    cal += 20 if bebida == 1 else 0;
+    cal += 70 if bebida == 2 else 0;
+    cal += 100 if bebida == 3 else 0;
+    cal += 75 if bebida == 4 else 0;
+    cal += 75 if sobremesa == 1 else 0;
+    cal += 110 if sobremesa == 2 else 0;
+    cal += 170 if sobremesa == 3 else 0;
+    cal += 200 if sobremesa == 4 else 0;
+
+    print(f"Total de calorias do pedido: {cal} kcal")
 
 #24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para
 #cobrar dos motoristas o DUT. Sabendo-se que o mês em que o emplacamento do
