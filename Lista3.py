@@ -56,7 +56,12 @@ def q4():
 #lidos. Suponha que os números lidos sejam positivos.
 
 def q5():
-    num1
+    num1 = int(input("Número 1: "))
+    num2 = int(input("Número 2: "))
+    soma = 0
+    for _ in range(num1):
+        soma += num2
+    print (soma)
 
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
@@ -64,6 +69,14 @@ def q5():
 #• 1 + 1 = 2, terceiro termo;
 #• 1 + 2 = 3, quarto termo, etc.
 # 1 1 2 3 5 8 13 21
+
+def q6():
+    fibonacci = 1
+    fibonaccii = 1
+    soma = fibonacci + fibonaccii
+        if soma > fibonacci:
+        for soma in range (18):
+            print (f"Esse é o termo {soma} ")    
 
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
