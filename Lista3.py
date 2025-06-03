@@ -178,6 +178,27 @@ def q12():
 #• O total de consumo para os três tipos de consumidor
 #• A média de consumo dos tipos 1 e 2
 
+def 13():
+    soma = 0
+    for _ in range(3):
+        numero_do_consumidor = int(input("Digite o número: "))
+        qtd_kwh = int(input("Digite a kilometragem: "))
+        tipo_consumidor = int(input("Digite o tipo: "))
+        residencial = qtd_kwh*0.3
+        comercial = qtd_kwh*0.5
+        industrial = qtd_kwh*0.7
+        if tipo_consumidor == 1:
+            print (f"Esse é o custo em R${residencial}")
+        if tipo_consumidor == 2:
+            print (f"Esse é o custo em R${comercial}")
+        if tipo_consumidor == 3:
+            print (f"Esse é o custo em R${industrial}")
+        
+    
+    
+
+
+
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
 
