@@ -130,6 +130,9 @@ def q8():
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
 
+def q09():
+    idade: int_input("Digite a sua idade: ")
+    
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
 #jogadores, crie um programa que apresente as seguintes informações:
@@ -143,8 +146,6 @@ def q8():
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
 
-def q11():
-    int num = -1
 
 #12. Dado um país A, com 5 milhões de habitantes e uma taxa de natalidade de 3% ao
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
@@ -154,9 +155,9 @@ def q11():
 def q12():
     populacaoA = 5000000
     populacaoB = 7000000
-    ano = 0
+    anos = 0
     while populacaoA < populacaoB
-    ano += 1
+    anos += 1
     populacaoA = populacaoA * 0.03
     populacaoB = populacaoB * 0.02
     print (f"Após {anos} anos")
