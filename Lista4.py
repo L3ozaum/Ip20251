@@ -47,18 +47,20 @@ def q3():
     numeros = []
     for _ in range(15):
         numeros.append(random.randrange(100))
-    if numeros % 2 == 0:
-        print (f" Esse {numeros}É Par")
-    else:
-        print (f" Esse {numeros}É Ímpar")
     cont = 1
     for x in numeros:
-        print(f'{cont}: {x}')
-        cont+=1
+        if x % 2 == 0:
+            print(f'{cont}: {x} é Par')
+        else:
+            print(f'{cont}: {x} é Ímpar')
+        cont += 1
     
 
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
+
+def q4():
+    
 
 #5. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule
 #e armazene a média arredondada. Armazene também a situação do aluno: 1-
