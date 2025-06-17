@@ -47,10 +47,10 @@ def q3():
     numeros = []
     for _ in range(15):
         numeros.append(random.randrange(100))
-    if numeros %2 == 0:
-        print ("É Par")
+    if numeros % 2 == 0:
+        print (f" Esse {numeros}É Par")
     else:
-        print ("É Ímpar")
+        print (f" Esse {numeros}É Ímpar")
     cont = 1
     for x in numeros:
         print(f'{cont}: {x}')
