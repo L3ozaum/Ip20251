@@ -60,7 +60,18 @@ def q3():
 #números. Ao final, imprima o total de números múltiplos de seis.
 
 def q4():
-    
+    numeros = []
+    for _ in range(8):
+        numeros.append(random.randrange(50))
+    cont = 1
+    for x in numeros:
+        if x % 6 == 0:
+            print(f'{cont}: {x} é múltiplo de 6')
+        else:
+            print(f'{cont}: {x} Não é múltiplo de 6')
+        cont += 1
+
+
 
 #5. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule
 #e armazene a média arredondada. Armazene também a situação do aluno: 1-
@@ -91,6 +102,8 @@ def q5():
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
 #necessárias.
+
+
 
 #7. Crie um programa que leia o preço de compra e o preço de venda de 100 mercadorias
 #(utilize listas). Ao final, o programa deverá imprimir quantas mercadorias
