@@ -31,3 +31,7 @@ def input_int(msg, min, max):
         except:
             print('Erro desconhecido. Entre em contato com o admin do sistema!')
     return numero
+
+    def nomeAleatorio():
+    nomes = ['João', 'Pedro','Carla', 'Maria', 'José', 'Ana']
+    return nomes[random.randrange(0,6)]
