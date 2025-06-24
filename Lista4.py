@@ -103,6 +103,20 @@ def q5():
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
 #necessárias.
 
+def q6():
+    salario = []
+    reajuste = 0
+    for _ in range(20):
+        salario.append(random.randrange(100000))
+    if salario >= 0:
+        reajuste = salario *0.08
+    
+    resultado = 'SALARIO\tSALARIOCOMREAJUSTE\n'
+    for x in salario:
+        resultado += f'{x["Salário"]}\t{x["Salário com o Reajuste"]}\n'
+    print(resultado)
+    
+    
 
 
 #7. Crie um programa que leia o preço de compra e o preço de venda de 100 mercadorias
