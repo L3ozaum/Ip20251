@@ -106,14 +106,15 @@ def q5():
 def q6():
     salario = []
     reajuste = 0
+    salarios = []
     for _ in range(20):
         salario.append(random.randrange(100000))
-    if salario >= 0:
-        reajuste = salario *0.08
-    
+    if salarios > 0:
+        reajuste = salarios * 0.08
+
     resultado = 'SALARIO\tSALARIOCOMREAJUSTE\n'
-    for x in salario:
-        resultado += f'{x["Salário"]}\t{x["Salário com o Reajuste"]}\n'
+    for x in salarios:
+        resultado += f"{x["Salário"]}\t{x["Salário com o Reajuste"]}\n"
     print(resultado)
     
     
